@@ -4,6 +4,7 @@
     <TargetFramework>net9.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>25d63d02-36f1-4faf-94aa-72789e001144</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -12,10 +13,7 @@
     <PackageReference Include="MongoDB.Bson" Version="3.9.0" />
     <PackageReference Include="MongoDB.Driver" Version="3.9.0" />
     <PackageReference Include="MongoDB.Driver.Core" Version="2.30.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Controllers\" />
+    <PackageReference Include="Scalar.AspNetCore" Version="2.16.5" />
   </ItemGroup>
 
 </Project>
