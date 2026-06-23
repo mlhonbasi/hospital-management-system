@@ -7,14 +7,8 @@ namespace HospitalManagementSystem.BranchService.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class BranchesController : ControllerBase
+    public class BranchesController(IBranchService _branchService) : ControllerBase
     {
-        private readonly IBranchService _branchService;
-
-        public BranchesController(IBranchService branchService)
-        {
-            _branchService = branchService;
-        }
 
         [HttpGet]
         public async Task<IActionResult> BranchList()
@@ -48,6 +42,8 @@ namespace HospitalManagementSystem.BranchService.Controllers
         public async Task<IActionResult> GetBranch(string id)
         {
             var value = await _branchService.GetByIdAsync(id);
+            if (value == null)
+                return NotFound("Doktor bulunamadi");
             return Ok(value);
         }
     }

@@ -19,6 +19,7 @@ namespace HospitalManagementSystem.BranchService.Services
             var client = new MongoClient(databaseSettings.ConnectionString);
             var database = client.GetDatabase(databaseSettings.DatabaseName);
             _branchCollection = database.GetCollection<Branch>(databaseSettings.BranchCollectionName);
+
             _mapper = mapper;
         }
 
