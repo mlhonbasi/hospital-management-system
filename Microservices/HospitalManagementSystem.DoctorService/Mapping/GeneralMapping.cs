@@ -12,6 +12,10 @@ namespace HospitalManagementSystem.DoctorService.Mapping
             CreateMap<Doctor, UpdateDoctorDto>().ReverseMap();
             CreateMap<Doctor, GetDoctorByIdDto>().ReverseMap();
             CreateMap<Doctor, ResultDoctorDto>().ReverseMap();
+            CreateMap<Award, AwardDto>().ReverseMap();
+            CreateMap<Experience, ExperienceDto>().ReverseMap();
+            CreateMap<Education, EducationDto>().ReverseMap();
+            CreateMap<Location, LocationDto>().ReverseMap();
         }
     }
 }

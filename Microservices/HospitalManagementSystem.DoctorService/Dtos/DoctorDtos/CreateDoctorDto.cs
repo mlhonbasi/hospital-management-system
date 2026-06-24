@@ -17,6 +17,7 @@ namespace HospitalManagementSystem.DoctorService.Dtos.DoctorDtos
         public List<EducationDto> Educations { get; set; }
         public List<ExperienceDto> Experiences { get; set; }
         public List<AwardDto> Awards { get; set; }
+        public List<LocationDto> Locations { get; set; }
         public List<string> Services { get; set; }
         public List<string> Specializations { get; set; }
     }
