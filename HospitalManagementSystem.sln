@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HospitalManagementSystem.Br
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HospitalManagementSystem.DoctorService", "Microservices\HospitalManagementSystem.DoctorService\HospitalManagementSystem.DoctorService.csproj", "{574F57BE-B751-44B7-AD1E-BC459B61553E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HospitalManagementSystem.ReviewService", "Microservices\HospitalManagementSystem.ReviewService\HospitalManagementSystem.ReviewService.csproj", "{FAAA8DD4-20E6-4536-841E-16D6259C4660}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +25,10 @@ Global
 		{574F57BE-B751-44B7-AD1E-BC459B61553E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{574F57BE-B751-44B7-AD1E-BC459B61553E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{574F57BE-B751-44B7-AD1E-BC459B61553E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FAAA8DD4-20E6-4536-841E-16D6259C4660}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAAA8DD4-20E6-4536-841E-16D6259C4660}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAAA8DD4-20E6-4536-841E-16D6259C4660}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAAA8DD4-20E6-4536-841E-16D6259C4660}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -30,6 +36,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{D13AD100-44C7-4ECE-9267-3B26213A1A30} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{574F57BE-B751-44B7-AD1E-BC459B61553E} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{FAAA8DD4-20E6-4536-841E-16D6259C4660} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {38D75407-910D-41A5-9DB0-A9A15B09FAA6}

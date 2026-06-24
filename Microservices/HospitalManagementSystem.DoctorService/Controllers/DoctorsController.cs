@@ -11,7 +11,7 @@ namespace HospitalManagementSystem.DoctorService.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAllDoctors()
         {
-            var doctors = await _doctorService.GetAllAsync(); 
+            var doctors = await _doctorService.GetAllAsync();
             return Ok(doctors);
         }
         [HttpPost]
@@ -20,7 +20,7 @@ namespace HospitalManagementSystem.DoctorService.Controllers
             await _doctorService.CreateAsync(dto);
             return Ok("Doktor başarıyla oluşturuldu.");
         }
-        [HttpGet("GetDoctor")]
+        [HttpGet("{id}")]
         public async Task<IActionResult> GetDoctorById(string id)
         {
             var doctor = await _doctorService.GetDoctorByIdAsync(id);
