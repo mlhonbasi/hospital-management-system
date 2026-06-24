@@ -1,0 +1,6 @@
+@HospitalManagementSystem.ReviewService_HostAddress = http://localhost:5048
+
+GET {{HospitalManagementSystem.ReviewService_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
