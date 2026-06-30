@@ -1,5 +1,5 @@
 ﻿using HospitalManagementSystem.AppointmentService.Dtos.AppointmentDtos;
-using HospitalManagementSystem.AppointmentService.Services;
+using HospitalManagementSystem.AppointmentService.Services.AppointmentServices;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 

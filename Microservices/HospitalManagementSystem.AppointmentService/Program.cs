@@ -1,5 +1,6 @@
 using HospitalManagementSystem.AppointmentService.Context;
-using HospitalManagementSystem.AppointmentService.Services;
+using HospitalManagementSystem.AppointmentService.Services.AppointmentDetailServices;
+using HospitalManagementSystem.AppointmentService.Services.AppointmentServices;
 using HospitalManagementSystem.AppointmentService.Settings;
 using Microsoft.Extensions.Options;
 using Scalar.AspNetCore;
@@ -8,7 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddScoped<IAppointmentService, AppointmentService>();
-
+builder.Services.AddScoped<IAppointmentDetailService, AppointmentDetailService>();
 builder.Services.Configure<DatabaseSettings>(builder.Configuration.GetSection("DatabaseSettingsKey"));
 builder.Services.AddSingleton<IDatabaseSettings>(sp =>
 sp.GetRequiredService<IOptions<IDatabaseSettings>>().Value);
