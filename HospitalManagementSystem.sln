@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HospitalManagementSystem.Re
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HospitalManagementSystem.AppointmentService", "Microservices\HospitalManagementSystem.AppointmentService\HospitalManagementSystem.AppointmentService.csproj", "{96533B5F-87B9-4E81-950B-F7FE67595CBF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HospitalManagementSystem.IdentityService", "Microservices\HospitalManagementSystem.IdentityService\HospitalManagementSystem.IdentityService.csproj", "{83F6C168-6781-4E48-AD8F-CE888B63AB57}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,10 @@ Global
 		{96533B5F-87B9-4E81-950B-F7FE67595CBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{96533B5F-87B9-4E81-950B-F7FE67595CBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{96533B5F-87B9-4E81-950B-F7FE67595CBF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83F6C168-6781-4E48-AD8F-CE888B63AB57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83F6C168-6781-4E48-AD8F-CE888B63AB57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83F6C168-6781-4E48-AD8F-CE888B63AB57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83F6C168-6781-4E48-AD8F-CE888B63AB57}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -44,6 +50,7 @@ Global
 		{574F57BE-B751-44B7-AD1E-BC459B61553E} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{FAAA8DD4-20E6-4536-841E-16D6259C4660} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{96533B5F-87B9-4E81-950B-F7FE67595CBF} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{83F6C168-6781-4E48-AD8F-CE888B63AB57} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {38D75407-910D-41A5-9DB0-A9A15B09FAA6}
