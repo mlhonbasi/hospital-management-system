@@ -4,7 +4,7 @@ using HospitalManagementSystem.AppointmentService.Dtos.AppointmentDtos;
 using HospitalManagementSystem.AppointmentService.Entitites;
 using Microsoft.EntityFrameworkCore;
 
-namespace HospitalManagementSystem.AppointmentService.Services
+namespace HospitalManagementSystem.AppointmentService.Services.AppointmentServices
 {
     public class AppointmentService : IAppointmentService
     {

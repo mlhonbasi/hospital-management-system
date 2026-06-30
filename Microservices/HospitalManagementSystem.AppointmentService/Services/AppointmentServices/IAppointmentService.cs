@@ -1,6 +1,6 @@
 ﻿using HospitalManagementSystem.AppointmentService.Dtos.AppointmentDtos;
 
-namespace HospitalManagementSystem.AppointmentService.Services
+namespace HospitalManagementSystem.AppointmentService.Services.AppointmentServices
 {
     public interface IAppointmentService
     {
