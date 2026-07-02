@@ -1,7 +1,9 @@
 using HospitalManagementSystem.IdentityService.Context;
 using HospitalManagementSystem.IdentityService.Entities;
+using HospitalManagementSystem.IdentityService.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Scalar.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +15,8 @@ builder.Services.AddDbContext<HMSIdentityDbContext>(options => options.UseSqlSer
 builder.Services.AddIdentity<AppUser, IdentityRole>()
     .AddEntityFrameworkStores<HMSIdentityDbContext>()
     .AddDefaultTokenProviders();
+
+builder.Services.AddScoped<IAuthService, AuthService>();
 // Add services to the container.
 
 builder.Services.AddControllers();
@@ -25,10 +29,12 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
+    app.MapScalarApiReference();
 }
 
 app.UseHttpsRedirection();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
