@@ -17,6 +17,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HospitalManagementSystem.Id
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HospitalManagementSystem.PrescriptionService", "Microservices\HospitalManagementSystem.PrescriptionService\HospitalManagementSystem.PrescriptionService.csproj", "{91D61879-DCC9-4BF7-85B8-5EC67A279358}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Frontends", "Frontends", "{BD08272D-41E7-4AA1-9598-AD310374432D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HospitalManagementSystem.WebUI", "Frontends\HospitalManagementSystem.WebUI\HospitalManagementSystem.WebUI.csproj", "{ABD17983-ED20-40F9-82A1-26A991D8F5E2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +51,10 @@ Global
 		{91D61879-DCC9-4BF7-85B8-5EC67A279358}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{91D61879-DCC9-4BF7-85B8-5EC67A279358}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{91D61879-DCC9-4BF7-85B8-5EC67A279358}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABD17983-ED20-40F9-82A1-26A991D8F5E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABD17983-ED20-40F9-82A1-26A991D8F5E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABD17983-ED20-40F9-82A1-26A991D8F5E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABD17983-ED20-40F9-82A1-26A991D8F5E2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -58,6 +66,7 @@ Global
 		{96533B5F-87B9-4E81-950B-F7FE67595CBF} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{83F6C168-6781-4E48-AD8F-CE888B63AB57} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{91D61879-DCC9-4BF7-85B8-5EC67A279358} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{ABD17983-ED20-40F9-82A1-26A991D8F5E2} = {BD08272D-41E7-4AA1-9598-AD310374432D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {38D75407-910D-41A5-9DB0-A9A15B09FAA6}
