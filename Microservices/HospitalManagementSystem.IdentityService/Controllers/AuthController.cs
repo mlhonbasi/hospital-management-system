@@ -21,10 +21,12 @@ namespace HospitalManagementSystem.IdentityService.Controllers
         [HttpPost("login")]
         public async Task<IActionResult> Login(LoginDto dto)
         {
-            var result = await _authService.LoginAsync(dto);
-            if (!result)
+            var token = await _authService.LoginAsync(dto);
+
+            if (token == null)
                 return BadRequest("Kullanıcı e-posta veya şifre hatalı.");
-            return Ok("Giriş başarılı.");
-        }
+
+            return Ok(new { token });
+        } 
     }
 }

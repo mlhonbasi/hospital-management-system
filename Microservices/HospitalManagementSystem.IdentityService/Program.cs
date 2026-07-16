@@ -1,6 +1,7 @@
 using HospitalManagementSystem.IdentityService.Context;
 using HospitalManagementSystem.IdentityService.Entities;
 using HospitalManagementSystem.IdentityService.Services;
+using HospitalManagementSystem.IdentityService.Settings;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Scalar.AspNetCore;
@@ -9,6 +10,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 
+//IOptions<JwtSettings> ile servislerde kullanýlýr.
+builder.Services.Configure<JwtSettings>(builder.Configuration.GetSection("Jwt"));
 
 builder.Services.AddDbContext<HMSIdentityDbContext>(options => options.UseSqlServer(connectionString));
 
