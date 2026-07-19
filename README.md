@@ -78,12 +78,16 @@ kaydında tutulur (her projede bir `UserSecretsId` tanımlı) —
 
 | Servis | user-secrets anahtarı |
 |---|---|
-| `IdentityService` | `ConnectionStrings:DefaultConnection` |
+| `IdentityService` | `ConnectionStrings:DefaultConnection`, `Jwt:Key`, `Jwt:Issuer`, `Jwt:Audience`, `Jwt:ExpireMinutes` |
 | `AppointmentService` | `DatabaseSettingsKey:ConnectionString` |
 | `PrescriptionService` | `ConnectionStrings:PostgreConnection` |
 | `DoctorService` | `DatabaseSettingsKey:ConnectionString`, `DatabaseSettingsKey:DatabaseName`, `DatabaseSettingsKey:DoctorCollectionName` |
-| `BranchService` | `DatabaseSettingsKey:ConnectionString`, `DatabaseSettingsKey:DatabaseName`, `DatabaseSettingsKey:BranchCollectionName` |
+| `BranchService` | `DatabaseSettingsKey:ConnectionString`, `DatabaseSettingsKey:DatabaseName`, `DatabaseSettingsKey:BranchCollectionName`, `Jwt:Key`, `Jwt:Issuer`, `Jwt:Audience` |
 | `ReviewService` | `DatabaseSettingsKey:ConnectionString`, `DatabaseSettingsKey:DatabaseName`, `DatabaseSettingsKey:ReviewCollectionName` |
+
+`BranchService`'in `Jwt:Key`/`Jwt:Issuer`/`Jwt:Audience` değerleri, token'ı
+imzalayan `IdentityService`'inkilerle **birebir aynı** olmalıdır (simetrik key
+ile doğrulama yapılıyor).
 
 Bir servisi lokalde çalıştırmak için:
 

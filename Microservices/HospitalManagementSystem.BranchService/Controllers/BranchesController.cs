@@ -1,12 +1,13 @@
 ﻿using HospitalManagementSystem.BranchService.Dtos.BranchDtos;
 using HospitalManagementSystem.BranchService.Services;
-using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HospitalManagementSystem.BranchService.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize(Roles = "Admin")]
     public class BranchesController(IBranchService _branchService) : ControllerBase
     {
 

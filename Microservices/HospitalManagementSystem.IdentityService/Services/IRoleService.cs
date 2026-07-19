@@ -2,9 +2,8 @@
 
 namespace HospitalManagementSystem.IdentityService.Services
 {
-    public interface IAuthService
+    public interface IRoleService
     {
-        Task<bool> RegisterAsync(RegisterDto dto);
-        Task<string?> LoginAsync(LoginDto dto);
+        Task<bool> CreateRoleAsync(CreateRoleDto dto);
     }
 }
