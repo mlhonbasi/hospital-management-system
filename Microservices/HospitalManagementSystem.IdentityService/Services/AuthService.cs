@@ -40,7 +40,7 @@ namespace HospitalManagementSystem.IdentityService.Services
             if (!result.Succeeded)
                 return null;
 
-            return GenerateToken(user);
+            return await GenerateToken(user);
         }
 
         public async Task<bool> RegisterAsync(RegisterDto dto)
@@ -57,8 +57,10 @@ namespace HospitalManagementSystem.IdentityService.Services
             return result.Succeeded;
         }
 
-        private string GenerateToken(AppUser user)
+        private async Task<string> GenerateToken(AppUser user)
         {
+            var userRoles = await _userManager.GetRolesAsync(user);
+
             var claims = new List<Claim>
             {
                 new Claim(ClaimTypes.NameIdentifier, user.Id),
@@ -66,6 +68,11 @@ namespace HospitalManagementSystem.IdentityService.Services
                 new Claim("name", user.Name ?? ""),
                 new Claim("surname", user.Surname ?? "")
             };
+
+            foreach (var item in userRoles)
+            {
+                claims.Add(new Claim(ClaimTypes.Role, item));
+            }
 
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_jwtSettings.Key!));
 

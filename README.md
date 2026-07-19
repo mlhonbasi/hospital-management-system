@@ -78,7 +78,7 @@ kaydında tutulur (her projede bir `UserSecretsId` tanımlı) —
 
 | Servis | user-secrets anahtarı |
 |---|---|
-| `IdentityService` | `ConnectionStrings:DefaultConnection` |
+| `IdentityService` | `ConnectionStrings:DefaultConnection`, `Jwt:Key`, `Jwt:Issuer`, `Jwt:Audience`, `Jwt:ExpireMinutes` |
 | `AppointmentService` | `DatabaseSettingsKey:ConnectionString` |
 | `PrescriptionService` | `ConnectionStrings:PostgreConnection` |
 | `DoctorService` | `DatabaseSettingsKey:ConnectionString`, `DatabaseSettingsKey:DatabaseName`, `DatabaseSettingsKey:DoctorCollectionName` |
