@@ -1,5 +1,9 @@
+using HospitalManagementSystem.WebUI.Services.RegisterServices;
+
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddScoped<IRegisterService, RegisterService>();
+builder.Services.AddHttpClient();
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
