@@ -1,12 +1,16 @@
 using HospitalManagementSystem.WebUI.Services.BranchServices;
+using HospitalManagementSystem.WebUI.Services.LoginServices;
 using HospitalManagementSystem.WebUI.Services.RegisterServices;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddScoped<IRegisterService, RegisterService>();
+builder.Services.AddScoped<ILoginService, LoginService>();
 builder.Services.AddScoped<IBranchService, BranchService>();
 
 builder.Services.AddHttpClient();
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddSession();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
@@ -24,22 +28,18 @@ if (!app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseRouting();
 
+app.UseSession();
+
 app.UseAuthorization();
 
 app.MapStaticAssets();
 
 app.MapControllerRoute(
+    name: "areas",
+    pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
+
+app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}")
-    .WithStaticAssets();
-
-app.UseEndpoints(endpoints =>
-{
-    endpoints.MapControllerRoute(
-      name: "areas",
-      pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}"
-    );
-});
-
+    pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();
