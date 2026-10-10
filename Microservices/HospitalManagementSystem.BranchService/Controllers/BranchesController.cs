@@ -1,13 +1,12 @@
 ﻿using HospitalManagementSystem.BranchService.Dtos.BranchDtos;
 using HospitalManagementSystem.BranchService.Services;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HospitalManagementSystem.BranchService.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize(Roles = "Admin")]
+    //[Authorize]
     public class BranchesController(IBranchService _branchService) : ControllerBase
     {
 
@@ -44,7 +43,7 @@ namespace HospitalManagementSystem.BranchService.Controllers
         {
             var value = await _branchService.GetByIdAsync(id);
             if (value == null)
-                return NotFound("Doktor bulunamadi");
+                return NotFound("Brans bulunamadi");
             return Ok(value);
         }
     }
