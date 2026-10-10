@@ -1,5 +1,6 @@
 ﻿using HospitalManagementSystem.WebUI.Dtos.BranchDtos;
 using Newtonsoft.Json;
+using System.Net.Http.Headers;
 using System.Text;
 
 namespace HospitalManagementSystem.WebUI.Services.BranchServices
@@ -7,10 +8,11 @@ namespace HospitalManagementSystem.WebUI.Services.BranchServices
     public class BranchService : IBranchService
     {
         private readonly HttpClient _httpClient;
-
-        public BranchService(HttpClient httpClient)
+        private readonly IHttpContextAccessor _httpContextAccessor;
+        public BranchService(HttpClient httpClient, IHttpContextAccessor httpContextAccessor)
         {
             _httpClient = httpClient;
+            _httpContextAccessor = httpContextAccessor;
         }
 
         public async Task CreateBranchAsync(CreateBranchDto dto)
@@ -27,6 +29,8 @@ namespace HospitalManagementSystem.WebUI.Services.BranchServices
 
         public async Task<List<ResultBranchDto>> GetAllBranchesAsync()
         {
+            var token = _httpContextAccessor.HttpContext.Session.GetString("JwtToken");
+            _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
 
             var responseMessage = await _httpClient.GetAsync("https://localhost:5000/api/branches");
             var jsonData = await responseMessage.Content.ReadAsStringAsync();

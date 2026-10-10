@@ -17,7 +17,7 @@ namespace HospitalManagementSystem.WebUI.Services.RegisterServices
             var json = JsonSerializer.Serialize(model);
             var content = new StringContent(json, Encoding.UTF8, "application/json");
 
-            var response = await _client.PostAsync(" https://localhost:7141/api/auth/register", content);
+            var response = await _client.PostAsync("https://localhost:7141/api/auth/register", content);
 
             return response.IsSuccessStatusCode;
         }
