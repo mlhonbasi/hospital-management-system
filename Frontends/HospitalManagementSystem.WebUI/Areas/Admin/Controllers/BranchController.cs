@@ -17,8 +17,19 @@ namespace HospitalManagementSystem.WebUI.Areas.Admin.Controllers
 
         public async Task<IActionResult> BranchList()
         {
-            var values = await _branchService.GetAllBranchesAsync();
-            return View(values);
+            try
+            {
+                var values = await _branchService.GetAllBranchesAsync();
+                return View(values);
+            }
+            catch (UnauthorizedAccessException ex)
+            {
+                if (ex.Message == "403")
+                {
+                    return RedirectToAction("Forbidden403", "Error", new { area = "" });
+                }
+                return RedirectToAction("SignIn", "Login");
+            }
         }
 
         [HttpGet]
