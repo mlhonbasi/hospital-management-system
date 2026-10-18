@@ -95,7 +95,8 @@ namespace HospitalManagementSystem.WebUI.Services.DoctorServices
 
             if (!responseMessage.IsSuccessStatusCode)
             {
-                throw new Exception("Bir hata oluştu");
+                var body = await responseMessage.Content.ReadAsStringAsync();
+                throw new Exception($"{(int)responseMessage.StatusCode}: {body}");
             }
         }
     }
