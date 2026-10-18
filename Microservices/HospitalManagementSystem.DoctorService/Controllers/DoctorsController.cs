@@ -1,5 +1,6 @@
 ﻿using HospitalManagementSystem.DoctorService.Dtos.DoctorDtos;
 using HospitalManagementSystem.DoctorService.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HospitalManagementSystem.DoctorService.Controllers
@@ -8,6 +9,7 @@ namespace HospitalManagementSystem.DoctorService.Controllers
     [ApiController]
     public class DoctorsController(IDoctorService _doctorService) : ControllerBase
     {
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         public async Task<IActionResult> GetAllDoctors()
         {
@@ -24,6 +26,7 @@ namespace HospitalManagementSystem.DoctorService.Controllers
         public async Task<IActionResult> GetDoctorById(string id)
         {
             var doctor = await _doctorService.GetDoctorByIdAsync(id);
+            if (doctor == null) return NotFound("Doktor bulunamadı.");
             return Ok(doctor);
         }
         [HttpDelete]
