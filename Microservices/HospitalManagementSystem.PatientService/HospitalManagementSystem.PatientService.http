@@ -1,0 +1,6 @@
+@HospitalManagementSystem.PatientService_HostAddress = http://localhost:5068
+
+GET {{HospitalManagementSystem.PatientService_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
