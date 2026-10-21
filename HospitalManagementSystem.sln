@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.14.37203.1
+# Visual Studio Version 18
+VisualStudioVersion = 18.10.12224.181 stable
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Microservices", "Microservices", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 EndProject
@@ -24,6 +24,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApiGateway", "ApiGateway", "{102D9B69-BDEF-4528-8E96-9266B28BD92A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HospitalManagementSystem.Gateway", "HospitalManagementSystem.Gateway\HospitalManagementSystem.Gateway.csproj", "{0B47CE35-84B8-408C-B810-3187BAE58E3B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HospitalManagementSystem.PatientService", "Microservices\HospitalManagementSystem.PatientService\HospitalManagementSystem.PatientService.csproj", "{8ABA3A99-10B6-4B23-AF32-170297C36821}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{0B47CE35-84B8-408C-B810-3187BAE58E3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0B47CE35-84B8-408C-B810-3187BAE58E3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0B47CE35-84B8-408C-B810-3187BAE58E3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8ABA3A99-10B6-4B23-AF32-170297C36821}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8ABA3A99-10B6-4B23-AF32-170297C36821}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8ABA3A99-10B6-4B23-AF32-170297C36821}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8ABA3A99-10B6-4B23-AF32-170297C36821}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -76,6 +82,7 @@ Global
 		{91D61879-DCC9-4BF7-85B8-5EC67A279358} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{ABD17983-ED20-40F9-82A1-26A991D8F5E2} = {BD08272D-41E7-4AA1-9598-AD310374432D}
 		{0B47CE35-84B8-408C-B810-3187BAE58E3B} = {102D9B69-BDEF-4528-8E96-9266B28BD92A}
+		{8ABA3A99-10B6-4B23-AF32-170297C36821} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {38D75407-910D-41A5-9DB0-A9A15B09FAA6}
