@@ -1,6 +1,7 @@
 using HospitalManagementSystem.WebUI.Services.BranchServices;
 using HospitalManagementSystem.WebUI.Services.DoctorServices;
 using HospitalManagementSystem.WebUI.Services.LoginServices;
+using HospitalManagementSystem.WebUI.Services.PatientServices;
 using HospitalManagementSystem.WebUI.Services.RegisterServices;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,7 +10,7 @@ builder.Services.AddScoped<IRegisterService, RegisterService>();
 builder.Services.AddScoped<ILoginService, LoginService>();
 builder.Services.AddScoped<IBranchService, BranchService>();
 builder.Services.AddScoped<IDoctorService, DoctorService>();
-
+builder.Services.AddScoped<IPatientService, PatientService>();
 
 builder.Services.AddHttpClient();
 builder.Services.AddHttpContextAccessor();
